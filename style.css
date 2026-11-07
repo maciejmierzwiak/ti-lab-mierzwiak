@@ -1,0 +1,15 @@
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    gap: 16px;
+}
+.menu a {
+    text-decoration: none;
+}
+.menu a:hover {
+    color: #4426FF;
+}
