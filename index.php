@@ -21,7 +21,18 @@ $cennik = [
 </head>
 <body>
     <header class="site-header">
-        <h1 class="logo"><i class="fa-solid fa-person-biking" aria-hidden="true"></i> Szprycha</h1>
+        <h1 class="logo">
+            <a class="logo" href="#">
+                <svg viewBox="0 0 120 64" width="72" height="38" role="img" aria-labelledby="logo-tytul">
+                    <title id="logo-tytul">Szprycha</title>
+                    <circle cx="28" cy="42" r="18" fill="none" stroke="#ffcc00" stroke-width="5"/>
+                    <circle cx="92" cy="42" r="18" fill="none" stroke="#ffcc00" stroke-width="5"/>
+                    <polyline points="28,42 48,14 80,14 92,42" fill="none" stroke="#ffcc00" stroke-width="5"/>
+                    <polyline points="48,14 60,42 80,14" fill="none" stroke="#ffcc00" stroke-width="5"/>
+                </svg>
+                <span>Szprycha</span>
+            </a>
+        </h1>
         <button class="menu-toggle" aria-expanded="false">Menu</button>
         <nav class="menu" aria-label="Główna nawigacja">
             <a href="#uslugi">Usługi</a>
