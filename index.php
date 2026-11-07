@@ -99,6 +99,27 @@ $cennik = [
                     </tbody>
                 </table>
             </div>
+            
+            <h3 style="margin-top: 40px; color: #ffffff;">Wizualizacja cen</h3>
+            <div style="background: #1c1e24; border-radius: 12px; padding: 24px; border: 1px solid #2a2d35; max-width: 600px;">
+                <svg viewBox="0 0 550 <?= count($cennik) * 40 ?>" width="100%" style="display: block;">
+                    <?php 
+                    $y = 10;
+                    foreach ($cennik as $usluga): 
+                        $szerokosc = $usluga['cena'];
+                    ?>
+
+                        <text x="0" y="<?= $y + 15 ?>" fill="#e6e6e6" font-size="14" font-family="Poppins"><?= htmlspecialchars($usluga['nazwa']) ?></text>
+
+                        <rect x="180" y="<?= $y ?>" width="<?= $szerokosc ?>" height="20" fill="#ffcc00" rx="4" />
+                        
+                        <text x="<?= 180 + $szerokosc + 10 ?>" y="<?= $y + 15 ?>" fill="#ffcc00" font-size="14" font-family="Poppins" font-weight="bold"><?= $usluga['cena'] ?> zł</text>
+                    <?php 
+                        $y += 40;
+                    endforeach; 
+                    ?>
+                </svg>
+            </div>
         </section>
     </main>
 
