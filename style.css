@@ -13,3 +13,18 @@
 .menu a:hover {
     color: #4426FF;
 }
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.card {
+    flex: 1 1 260px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+}
+.card--highlight {
+    border-color: #4426FF;
+    background: #EEF;
+}
