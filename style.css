@@ -49,7 +49,7 @@ h2 i {
     display: block;
 }
 
-/* Header & Nawigacja (Zadanie 2) */
+/* Header & nawigacja (zadanie 2) */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -104,7 +104,7 @@ h2 i {
     width: 100%;
 }
 
-/* Karty usług (Zadanie 3) */
+/* Karty usług (zadanie 3) */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -150,7 +150,7 @@ h2 i {
     margin: 0;
 }
 
-/* Interakcje kart (Bonus na plus: uniesienie o 6px + cień) */
+/* Interakcje kart */
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
@@ -184,7 +184,7 @@ h2 i {
     box-shadow: 0 4px 12px rgba(255, 204, 0, 0.35);
 }
 
-/* Cennik i tabela (Zadanie 4) */
+/* Cennik i tabela (zadanie 4) */
 .table-container {
     background: #1c1e24;
     border-radius: 12px;
@@ -272,8 +272,25 @@ h2 i {
     color: #ffcc00;
 }
 
-/* RWD (Bonus na plus: menu w kolumnie poniżej 600px) */
+/* Domyślnie ukrywany przycisk na komputerze */
+.menu-toggle {
+    display: none;
+    background-color: #ffcc00;
+    color: #121316;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Lab 1 - bonus */
 @media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+        align-self: center;
+    }
+    
     .site-header {
         flex-direction: column;
         gap: 20px;
@@ -281,12 +298,19 @@ h2 i {
     }
     
     .menu {
+        display: none;
         flex-direction: column;
         align-items: center;
         gap: 16px;
+        width: 100%;
+    }
+
+    .menu.menu--open {
+        display: flex; /* Pokaż menu po kliknięciu */
     }
     
     .footer-content {
         flex-direction: column;
     }
 }
+
