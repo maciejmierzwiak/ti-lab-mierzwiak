@@ -1,6 +1,7 @@
 <?php
 $firma = 'Szprycha';
 $rok = date('Y');
+$imie = $_GET['imie'] ?? 'Gościu';
 $cennik = [
     ['nazwa' => 'Przegląd podstawowy', 'cena' => 120],
     ['nazwa' => 'Przegląd kompleksowy', 'cena' => 250],
@@ -42,6 +43,10 @@ $cennik = [
     </header>
 
     <main>
+        <div style="background-color: #242420; padding: 15px 20px; border-radius: 8px; margin-bottom: 30px; border: 1px solid #ffcc00; color: #ffcc00; font-weight: 600;">
+            <p style="margin: 0;">Cześć, <?= htmlspecialchars($imie) ?>!</p>
+        </div>
+
         <section id="uslugi">
             <h2><i class="fa-solid fa-wrench" aria-hidden="true"></i> Nasze usługi</h2>
             
